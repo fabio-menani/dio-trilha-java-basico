@@ -1,23 +1,23 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite o primeiro parâmetro:");
-        int parametroUm = scanner.nextInt();
+        // Entrada do saldo inicial
+        double saldoInicial = scanner.nextDouble();
 
-        System.out.println("Digite o segundo parâmetro:");
-        int parametroDois = scanner.nextInt();
+        // TODO: Na linha abaixo, implemente a entrada das três transações:
+        double transacao1 = scanner.nextDouble();
+        double transacao2 = scanner.nextDouble();
+        double transacao3 = scanner.nextDouble();
+        // TODO: Na linha abaixo, realize o cálculo do saldo final:
+        
+        // Saldo final
+        double saldoFinal = saldoInicial - transacao1 - transacao2 - transacao3;
+        System.out.printf("%.3f\n", saldoFinal);
 
-        try {
-            // Chamar o método contar da classe Contador
-            Contador.contar(parametroUm, parametroDois);
-        } catch (ParametrosInvalidosException e) {
-            // Capturar e exibir a exceção personalizada
-            System.out.println(e.getMessage());
-        } finally {
-            scanner.close();
-        }
+        scanner.close();
     }
 }
